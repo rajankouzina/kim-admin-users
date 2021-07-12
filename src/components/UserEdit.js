@@ -1,7 +1,7 @@
 import { blue } from '@material-ui/core/colors'
 import {Box} from '@material-ui/core';
 import React from 'react'
-import { AutocompleteArrayInput, Create, ListButton, SimpleForm, TextInput, PasswordInput,CheckboxGroupInput } from 'react-admin'
+import { AutocompleteArrayInput, Edit, ListButton, SimpleForm, TextInput, PasswordInput,CheckboxGroupInput } from 'react-admin'
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Styles } from '@material-ui/styles/withStyles';
 export const styles: Styles<Theme, any> = {
@@ -18,7 +18,7 @@ const useStyles = makeStyles(styles);
 const UserEdit = (props) => {
   const classes=useStyles(props);
   return (
-    <Create title='Create a User' {...props}> 
+    <Edit title='Create a User' {...props}> 
       <SimpleForm>
         <div style={{marginLeft:150}}>
           <h2 style={{color:"blue"}}>Add New User</h2>
@@ -76,7 +76,7 @@ const UserEdit = (props) => {
           <h4 style={{color:"blue", fontWeight:"300"}}>Permissions for this User</h4>
         </div>
       </SimpleForm>
-    </Create>
+    </Edit>
   )
 }
 
