@@ -89,7 +89,6 @@ const UserCreate = (props) => {
             { id: 'administrator', name: 'Administrator' },
           ]} />
         </div>
-        <Separator />
       </SimpleForm>
     </Create>
   )
