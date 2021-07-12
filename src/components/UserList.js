@@ -11,12 +11,12 @@ import {
 const UserList = (props) => {
   return (
     <List {...props}>
-      <Datagrid>
-        <TextField source='id' />
-        <TextField source='name' />
+      <Datagrid onclick>
+        <TextField source='user_id' label='User Name' />
+        <TextField source='first_name' />
         <EmailField source='email' />
+        <TextField source='phone_num'/>
         <EditButton basePath='/users' />
-        <DeleteButton basePath='/users' />
       </Datagrid>
     </List>
   )
