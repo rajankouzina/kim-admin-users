@@ -75,6 +75,11 @@ const UserCreate = (props) => {
         <div style={{marginLeft:150}}>
           <h4 style={{color:"blue", fontWeight:"300"}}>Permissions for this User</h4>
         </div>
+        <CheckboxGroupInput source="category" choices={[
+          { id: 'programming', name: 'Programming' },
+          { id: 'lifestyle', name: 'Lifestyle' },
+          { id: 'photography', name: 'Photography' },
+        ]} />
       </SimpleForm>
     </Create>
   )
