@@ -11,12 +11,12 @@ import UserEdit from './components/UserEdit'
 function App() {
   return (
     <Admin dataProvider={restProvider('https://kim-admin-db.herokuapp.com')}>
-      <Resource
+      {/* <Resource
         name='posts'
         list={PostList}
         create={PostCreate}
         edit={PostEdit}
-      />
+      /> */}
       <Resource
         name='users'
         list={UserList}
