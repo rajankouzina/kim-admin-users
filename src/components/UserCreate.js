@@ -1,9 +1,10 @@
-import { blue } from '@material-ui/core/colors'
 import {Box} from '@material-ui/core';
 import React from 'react'
-import { AutocompleteArrayInput, Create, ListButton, SimpleForm, TextInput, PasswordInput,CheckboxGroupInput } from 'react-admin'
+import { Create, SimpleForm, TextInput, PasswordInput,CheckboxGroupInput } from 'react-admin'
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Styles } from '@material-ui/styles/withStyles';
+
+
 export const styles: Styles<Theme, any> = {
   user_id: {width: 300 , display:'inline-block',marginLeft:150},
   password: { width: 300,display:'inline-block',marginLeft:150},
@@ -11,6 +12,8 @@ export const styles: Styles<Theme, any> = {
   first_name: { width: 300,display:'inline-block',marginLeft:150},
   last_name: { width: 300,display:'inline-block',marginLeft:150},
   phone_num: { width: 300,display:'inline-block',marginLeft:150},
+  checkboxDesign1: { width: 300,display:'inline-block',marginLeft:150},
+  checkboxDesign2: { width: 300,display:'inline-block',marginLeft:150}
 };
 
 const useStyles = makeStyles(styles);
@@ -72,9 +75,21 @@ const UserCreate = (props) => {
           variant="outlined" 
         />
         <Separator />
-        <div style={{marginLeft:150}}>
-          <h4 style={{color:"blue", fontWeight:"300"}}>Permissions for this User</h4>
+          <h4 style={{color:"blue", fontWeight:"300" , marginLeft:150}}>Permissions for this User</h4>
+          <div formClassName={classes.checkboxDesign1}>
+          <CheckboxGroupInput source="permission" label="Permission" choices={[
+            { id: 'sub_cat', name: 'Add a sub category' },
+            { id: 'main_cat', name: 'Add a main category' },
+          ]} />
+          </div>
+          <div formClassName={classes.checkboxDesign2}>
+          <CheckboxGroupInput source="associated" label="Associated Views" required choices={[
+            { id: 'skill_master', name: 'Skill Master' },
+            { id: 'learner', name: 'Learner' },
+            { id: 'administrator', name: 'Administrator' },
+          ]} />
         </div>
+        <Separator />
       </SimpleForm>
     </Create>
   )
