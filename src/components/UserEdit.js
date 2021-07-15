@@ -1,7 +1,6 @@
-import { blue } from '@material-ui/core/colors'
 import {Box} from '@material-ui/core';
 import React from 'react'
-import { AutocompleteArrayInput, Edit, ListButton, SimpleForm, TextInput, PasswordInput,CheckboxGroupInput } from 'react-admin'
+import { Edit, SimpleForm, TextInput, PasswordInput,CheckboxGroupInput } from 'react-admin'
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Styles } from '@material-ui/styles/withStyles';
 export const styles: Styles<Theme, any> = {

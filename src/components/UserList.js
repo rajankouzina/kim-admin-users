@@ -3,9 +3,7 @@ import {
   List,
   Datagrid,
   TextField,
-  EmailField,
-  EditButton,
-  DeleteButton,
+  EmailField
 } from 'react-admin'
 
 const UserList = (props) => {
